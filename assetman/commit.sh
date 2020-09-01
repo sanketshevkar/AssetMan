@@ -1,0 +1,3 @@
+cd organization/arc
+. arc.sh
+peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.example.com --peerAddresses localhost:7051 --tlsRootCertFiles ${PEER0_ORG1_CA} --peerAddresses localhost:9051 --tlsRootCertFiles ${PEER0_ORG2_CA} --peerAddresses localhost:11051 --tlsRootCertFiles ${PEER0_ORG3_CA} --channelID mychannel --peerAddresses localhost:13051 --tlsRootCertFiles ${PEER0_ORG4_CA} --peerAddresses localhost:15051 --tlsRootCertFiles ${PEER0_ORG5_CA} --peerAddresses localhost:17051 --tlsRootCertFiles ${PEER0_ORG6_CA} --peerAddresses localhost:19051 --tlsRootCertFiles ${PEER0_ORG7_CA} --peerAddresses localhost:21051 --tlsRootCertFiles ${PEER0_ORG8_CA} --name papercontract -v 0 --sequence 1 --tls --cafile $ORDERER_CA --waitForEvent
